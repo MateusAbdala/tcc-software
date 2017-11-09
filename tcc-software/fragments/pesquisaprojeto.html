@@ -1,0 +1,17 @@
+<div class="input-group" id="searchbar" ng-init="visivel = false">
+    <input type="text" class="form-control" placeholder="Procure por projetos..." />
+    <div class="input-group-btn">
+        <div class="btn-group">
+                <button class="btn btn-default" type="button" ng-click="visivel = !visivel"><i class="fa fa-caret-down"></i></button>
+            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="form-control" ng-show="visivel" id="dropsearch">                    
+    <div class="btn-group">
+        <button type="button" class="btn btn-success" data-target="premiados">Premiados</button>
+        <button type="button" class="btn btn-danger" data-target="naopremiados">Não Premiados</button>
+        <button type="button" class="btn btn-default" data-target="all">Todos</button>
+    </div>
+</div>

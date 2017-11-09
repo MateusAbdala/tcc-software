@@ -1,0 +1,72 @@
+body{
+    padding-top: 40px;
+}
+input.ng-dirty.ng-invalid {
+    border-color: red;
+}
+input.ng-dirty.ng-valid {
+	border-color: lightgreen;
+}
+
+/*search*/
+#dropsearch{
+    margin-right: 40px;
+}
+
+.dropdown.dropdown-lg .dropdown-menu {
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+
+
+@media screen and (min-width: 768px) {
+    #searchbar{
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    #dropsearch{
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 700px;
+    }
+}
+
+
+/*------------------image upload-----------------------*/
+
+
+/* Esconde o input 
+input[type='file'] {
+    background-color: #FF802B;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px
+}*/
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

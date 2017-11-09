@@ -1,0 +1,100 @@
+::selection{
+    background-color: greenyellow;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg-layout{
+    background-color: #569900;
+}
+
+.navbar li a{
+    margin: 0px 10px;
+}
+
+.navbar li a:hover{
+	text-shadow: 0 0 2px #00eeff, 0 0 3px #b1fe4c;
+    color: #fff;
+    border-radius: 3px;
+    transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+}
+
+.active{
+    color: #fff;
+    border-radius: 3px;
+}
+
+@media (max-width: 500px) {
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 501px) {
+    .logo{
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+
+
+/*--------------------------SOBRE----------------------*/
+.divautores {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#000, greenyellow);
+}
+/**
+ * Profile image component
+ */
+.profile-header-container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header-img {
+    padding: 54px;
+}
+
+.profile-header-img > img.rounded-circle {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 3px -3px  rgba(0,0,0,0.6);
+}
+
+.profile-header {
+    margin-top: 43px;
+}
+
+/**
+ * BADGE
+ */
+.rank-label-container {
+    padding: 20px;
+    margin-top: -5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.label.rank-label {
+    display: block;
+    background-color: #2a2a2a;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    box-shadow: 3px -3px  rgba(0,0,0,0.6);
+    color: white;
+}
