@@ -26,6 +26,13 @@ angular.module('mostra')
   };
 })
 
+.directive('dropuser', function(){
+  return {
+    restrict: 'E',
+    templateUrl: './fragments/dropuser.html'
+  };
+})
+
 .directive('pesquisaprojeto', function(){
   return {
     restrict: 'E',

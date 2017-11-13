@@ -11,9 +11,10 @@ export default mongoose.model('User', new Schema({
     	type: String, 
     	required: true, 
     	unique: true
-    }, 
-    admin: {
-			type: Boolean, 
-			default: false    	
-    }
+	}, 
+	usertype: {
+		type: String, 
+		required: true,  
+		default: "visitante"      	
+	}
 }));

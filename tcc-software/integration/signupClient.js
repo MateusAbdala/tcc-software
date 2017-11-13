@@ -5,7 +5,7 @@ angular.module('Authentication')
     function ($http, $rootScope, $timeout, $window) {
         var service = {};
 
-        service.SignUp = function (username, password, callback) {
+        service.SignUp = function (username, password, name, emailaddress, projectname, eixo, createdOn, phone, school, address, state, city, callback) {
             $http({
             	headers: {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'},
 						  method: 'POST',
@@ -14,15 +14,15 @@ angular.module('Authentication')
 						  	username: username, 
 							password: password,
 							name: name,
-							email: emailaddress,
+							emailaddress: emailaddress,
 							projectname: projectname,
 							eixo: eixo,
 							createdOn: createdOn,
 							phone: phone,
 							school: school,
 							address: address,
-							state: estado,
-							city: cidade
+							state: state,
+							city: city
 						  }
 						}).then(function successCallback(response) {
 					    callback(response);
