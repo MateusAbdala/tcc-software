@@ -35,7 +35,17 @@ angular.module('mostra')
         controller: 'ProjetoController',
         controllerAs: 'vm',
         templateUrl: fragmentsBase + '/projetoSelecionado.html'
-      }).otherwise({
+      })
+      .when('/userpage', {
+        templateUrl: fragmentsBase + '/userpage.html'
+      })
+      .when('/avaliador', {
+        templateUrl: fragmentsBase + '/avaliador.html'
+      })
+      .when('/colaborador', {
+        templateUrl: fragmentsBase + '/colaborador.html'
+      })
+      .otherwise({
         templateUrl : fragmentsBase + '/home.html'
       })
   }]);

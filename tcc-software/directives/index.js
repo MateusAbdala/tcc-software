@@ -40,6 +40,18 @@ angular.module('mostra')
   };
 })
 
+//computer directive
+.directive('computer', function() {
+  return {
+    restrict: 'E',
+    templateUrl: './fragments/computer.html',
+    controller: function($scope) {
+      $scope.today = new Date();      
+    },
+    controllerAs: "pcControl"
+  };
+})
+
 //Example file upload - START
 .directive("ngFileSelect", function(fileReader, $timeout) {
     return {

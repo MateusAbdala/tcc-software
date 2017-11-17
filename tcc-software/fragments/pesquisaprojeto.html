@@ -8,8 +8,18 @@
     </div>
 </div>
 
-<div class="form-control" ng-show="visivel" id="dropsearch">                    
-    <div class="btn-group">
+<div class="form-control row" ng-show="visivel" id="dropsearch">           
+    <div class="col-lg-8">
+        <label class="sr-only" for="form-eixo">Eixo Tecnológico</label>
+        <select 
+            name="eixo"
+            ng-model="selectedEixo" 
+            ng-options="eixo.nome for eixo in eixos"
+            class="form-control" >
+            <option value="" disabled selected>Eixo Tecnológico</option>
+        </select>  
+    </div>
+    <div class="btn-group col-lg-8">
         <button type="button" class="btn btn-success" data-target="premiados">Premiados</button>
         <button type="button" class="btn btn-danger" data-target="naopremiados">Não Premiados</button>
         <button type="button" class="btn btn-default" data-target="all">Todos</button>

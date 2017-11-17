@@ -8,9 +8,25 @@ input.ng-dirty.ng-valid {
 	border-color: lightgreen;
 }
 
-.dropdown-menu a{
-    margin-right: 10px;
+.dropdown-toggle{
+    text-decoration: none;
+    color: white;
 }
+
+.dropdown-menu p{
+    padding-right: 15px;
+}
+
+.btn-sq-lg {
+    width: 150px !important;
+    height: 150px !important;
+    color: #fff;
+  }
+  .btn-sq-lg:hover {
+    width: 155px !important;
+    height: 155px !important;
+    color: #fff;
+  }
 
 .navbar-login
 {
