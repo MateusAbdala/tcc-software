@@ -1,5 +1,5 @@
 <div class="input-group" id="searchbar" ng-init="visivel = false">
-    <input type="text" class="form-control" placeholder="Procure por projetos..." />
+    <input ng-model="searchbar" type="text" class="form-control" placeholder="Procure por projetos..." />
     <div class="input-group-btn">
         <div class="btn-group">
                 <button class="btn btn-default" type="button" ng-click="visivel = !visivel"><i class="fa fa-caret-down"></i></button>

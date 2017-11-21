@@ -19,6 +19,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="form-emailaddress">Email</label>
+                        <input type="email" name="emailaddress" class="form-control" ng-model="emailaddress" required>
+                        <div class="help-block" ng-show="form.emailaddress.$dirty && form.emailaddress.$error.required">
+                            <div class="alert alert-danger mt-1" ng-message="required">Email é necessário</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <button type="submit" ng-disabled="myForm.$invalid || dataLoading" class="btn btn-warning">Enviar!</button>
                         <img ng-if="dataLoading" src="../images/loading.gif" />
                     </div>
