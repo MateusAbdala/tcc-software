@@ -24,6 +24,9 @@ angular.module('mostra')
       .when('/sobre', {
         templateUrl: fragmentsBase + '/sobre.html'
       })
+      .when('/regras', {
+        templateUrl: fragmentsBase + '/regras.html'
+      })
       .when('/projetos', {
         module: 'Projeto',
         controller: 'ProjetoController',
@@ -39,11 +42,11 @@ angular.module('mostra')
       .when('/userpage', {
         templateUrl: fragmentsBase + '/userpage.html'
       })
-      .when('/avaliador', {
-        templateUrl: fragmentsBase + '/avaliador.html'
+      .when('/sejaumavaliador', {
+        templateUrl: fragmentsBase + '/sejaumavaliador.html'
       })
-      .when('/colaborador', {
-        templateUrl: fragmentsBase + '/colaborador.html'
+      .when('/sejaumcolaborador', {
+        templateUrl: fragmentsBase + '/sejaumcolaborador.html'
       })
       .otherwise({
         templateUrl : fragmentsBase + '/home.html'

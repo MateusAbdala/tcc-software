@@ -20,13 +20,16 @@
               <a class="nav-link" href="#!sobre" ng-click="page.setPage(3)">Sobre</a>
           </li>
           <li ng-show="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(4) }">
-              <a class="nav-link" href="#!relatorios" ng-click="page.setPage(4)">Relatorios</a>
+              <a class="nav-link" href="#!regras" ng-click="page.setPage(4)">Regras</a>
           </li>
-          <li ng-show="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(5) }">
-              <a class="nav-link" href="#!avaliacao" ng-click="page.setPage(5)">Avaliações</a>
+          <li ng-show="usertype == 'avaliador'" class="nav-item" ng-class="{ active:page.isSet(5) }">
+              <a class="nav-link" href="#!avaliador" ng-click="page.setPage(5)">Avaliações</a>
           </li>
-          <li ng-hide="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(6) }">
-            <a class="nav-link" href="#!participe" ng-click="page.setPage(6)">Participe!</a>
+          <li ng-show="usertype == 'administrador'" class="nav-item" ng-class="{ active:page.isSet(6) }">
+            <a class="nav-link" href="#!administrador" ng-click="page.setPage(6)">Administração</a>
+        </li>
+          <li ng-hide="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(7) }">
+            <a class="nav-link" href="#!participe" ng-click="page.setPage(7)">Participe!</a>
           </li>  
           
           <div class="text-white" ng-hide="userLoggedIn">

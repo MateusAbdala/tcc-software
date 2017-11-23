@@ -2,11 +2,6 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 export default mongoose.model('tccProject', new Schema({
-  userid: {
-    type: String,
-    default: '',
-    required: ''
-  },
   name: {
     type: String,
     default: '',
@@ -69,5 +64,9 @@ export default mongoose.model('tccProject', new Schema({
     type: String,
     default: 'Descrição padrão(default)...',
     required: 'Please fill description'
+  },
+  createdBy: {
+    type: String,
+    required: 'Please provide the ID of the user who is creating this project'
   }
 }))

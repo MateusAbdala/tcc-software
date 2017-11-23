@@ -39,8 +39,7 @@ export function signUp(req, res) {
   bcrypt.hash(req.body.password, saltRounds).then((hash) => {
 		var user = new User({ 
 	    name: req.body.name,
-	    password: hash,
-	    admin: true 
+	    password: hash
 	  });
 
 	  user.save((err) => {
