@@ -1,19 +1,19 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import MepProject from '../models/MepProject'
+import tccProject from '../models/tccProject'
 
 export function createProject(req, res){
 	if(validateRequest(req, res)){
-		var newMepProject = new MepProject({
+		var newtccProject = new tccProject({
 				name: req.body.name,
 				description: req.body.description
       });
 
-      newMepProject.save((err) => {
+      newtccProject.save((err) => {
         if(err){
            throw err;
         } else {
-          res.json({ success: true, message: 'Mep Project created successfully.' });
+          res.json({ success: true, message: 'tcc Project created successfully.' });
         }
       });
 	}
@@ -21,7 +21,7 @@ export function createProject(req, res){
 
 export function viewProject(req, res){
 	if(mongoose.Types.ObjectId.isValid(req.params.projectId)){
-		MepProject.find({_id: req.params.projectId}, (err,Projects) => {
+		tccProject.find({_id: req.params.projectId}, (err,Projects) => {
 			if(err) throw err;
 			res.json(Projects)
 		});
@@ -32,7 +32,7 @@ export function viewProject(req, res){
 
 export function updateProject(req, res){
 	if(mongoose.Types.ObjectId.isValid(req.params.projectId)){
-		MepProject.update({_id: req.params.projectId}, req.body, (err, result) => {
+		tccProject.update({_id: req.params.projectId}, req.body, (err, result) => {
 			if(err) throw err
 			res.json(result)
 		});
@@ -43,7 +43,7 @@ export function updateProject(req, res){
 
 export function deleteProject(req, res){
 	if(mongoose.Types.ObjectId.isValid(req.params.projectId)){
-		MepProject.remove({_id: req.params.projectId}, (err, result) => {
+		tccProject.remove({_id: req.params.projectId}, (err, result) => {
 			if(err) throw err
 			res.json(result)
 		});
@@ -53,7 +53,7 @@ export function deleteProject(req, res){
 }
 
 export function listProjects(req, res){
-	MepProject.find((err, Projects) => {
+	tccProject.find((err, Projects) => {
 		if(err) throw err
 		res.json(Projects)
 	});

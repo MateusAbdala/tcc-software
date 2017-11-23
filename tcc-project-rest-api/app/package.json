@@ -1,5 +1,5 @@
 {
-  "name": "mepProject-rest-api",
+  "name": "tccProject-rest-api",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.17.2",

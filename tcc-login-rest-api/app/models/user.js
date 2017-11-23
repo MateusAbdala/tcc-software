@@ -7,7 +7,12 @@ export default mongoose.model('User', new Schema({
    		required: true, 
    		unique: true
    	}, 
-    password: {
+	   password: {
+    	type: String, 
+    	required: true, 
+    	unique: true
+	},
+	emailaddress: {
     	type: String, 
     	required: true, 
     	unique: true
