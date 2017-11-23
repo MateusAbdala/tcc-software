@@ -27,8 +27,11 @@
           </li>
           <li ng-hide="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(6) }">
             <a class="nav-link" href="#!participe" ng-click="page.setPage(6)">Participe!</a>
-          </li>  
-          
+          </li>
+          <li ng-show="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(2) }">
+            <a class="nav-link" href="#!newproject" ng-click="page.setPage(7)">New Project</a>
+          </li>
+
           <div class="text-white" ng-hide="userLoggedIn">
             <a ng-click="page.setPage(0)" class="text-white" href="#!signup" style="text-decoration: none;">Cadastre-se</a>
             &nbsp|&nbsp
