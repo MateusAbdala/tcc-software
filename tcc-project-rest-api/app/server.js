@@ -35,4 +35,4 @@ app.use('/api', routes)
 const port = process.env.NODE_PORT || 8081
 app.listen(port)
 
-console.log(`mepProject-rest-api is running on ${env} environment on port ${port}`)
+console.log(`tccProject-rest-api is running on ${env} environment on port ${port}`)

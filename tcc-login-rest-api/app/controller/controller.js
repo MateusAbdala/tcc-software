@@ -10,7 +10,7 @@ export function middlewareTokenValidation(req, res, next) {
   if (token) {
     jwt.verify(token, process.env.MONGO_SECRET, (err, decoded) => {      
       if (err) {
-        return res.json({ success: false, message: 'Failed to authenticate token.' });    
+        return res.json({ success: false, message: 'falha na autenticação do token.' });    
       } else {
         req.decoded = decoded;    
         next();
@@ -19,19 +19,19 @@ export function middlewareTokenValidation(req, res, next) {
   } else {
     return res.status(403).send({ 
         success: false, 
-        message: 'No token provided.' 
+        message: 'Nenhum token fornecido.' 
     });
   }
 }
 
 export function signUp(req, res) {
 	if(req.body.name == null){
-		res.json({ success: false, message: 'Sign up failed. Username must be provided.' })
+		res.json({ success: false, message: 'Falha no Cadastro. Usuário deve ser fornecido.' })
 		return
 	} 
 	
 	if(req.body.password == null){
-		res.json({ success: false, message: 'Sign up failed. Password must be provided.' })
+		res.json({ success: false, message: 'Falha no Cadastro. Senha deve ser fornecida.' })
 		return
 	}
 
@@ -46,12 +46,12 @@ export function signUp(req, res) {
 	  user.save((err) => {
 	    if (err) {
 	    	if(err.code == 11000){
-	    		res.json({ success: false, message: 'Sign up failed. Username already exists.' })
+          res.json({ success: false, message: 'Falha no Cadastro. Usuário já existe.' })
 	    	} else {
 					throw err	    		
 	    	}
 	    } else {
-	    	res.json({ success: true, message: 'User created successfully' })
+	    	res.json({ success: true, message: 'Usuário Cadastrado com sucesso!' })
 	    }
 	    
 	  });
@@ -68,7 +68,7 @@ export function authenticate(req, res) {
     if (!user) {
       res.json({ 
       	success: false, 
-      	message: 'Authentication failed. User not found.' 
+      	message: 'Falha na autenticação. Usuário não encontrado.' 
       });
     } else if (user) {
 
@@ -85,7 +85,7 @@ export function authenticate(req, res) {
       	} else {
       		res.json({
 	          success: false,
-	          message: 'Wrong password!'
+	          message: 'Senha Incorreta!'
         	});
       	}
         

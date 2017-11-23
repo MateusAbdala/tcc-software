@@ -5,11 +5,11 @@ export default {
     		port: 27017
     	},
     	development: {
-				db: 'mepProjectdev',
+				db: 'tccProjectdev',
 				host: 'localhost'
     	},
     	production: {
-				db: 'mepProject',
+				db: 'tccProject',
 				host: 'localhost'
     	}
     }
