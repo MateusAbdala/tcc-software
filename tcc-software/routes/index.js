@@ -48,6 +48,12 @@ angular.module('mostra')
       .when('/sejaumcolaborador', {
         templateUrl: fragmentsBase + '/sejaumcolaborador.html'
       })
+      .when('/avaliador', {
+        templateUrl: fragmentsBase + '/avaliador.html'
+      })
+      .when('/administrador', {
+        templateUrl: fragmentsBase + '/administrador.html'
+      })
       .otherwise({
         templateUrl : fragmentsBase + '/home.html'
       })
