@@ -69,9 +69,5 @@ export default mongoose.model('tccProject', new Schema({
     type: String,
     default: 'Descrição padrão(default)...',
     required: 'Please fill description'
-  },
-    createdBy: {
-      type: String,
-      required: 'Please provide the ID of the user who is creating this project'
-    }
+  }
 }))
