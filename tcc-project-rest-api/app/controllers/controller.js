@@ -6,8 +6,7 @@ export function createProject(req, res){
 	if(validateRequest(req, res)){
 		var newtccProject = new tccProject({
 				name: req.body.name,
-				description: req.body.description,
-				createdBy: req.body.createdBy
+				description: req.body.description
       });
 
       newtccProject.save((err) => {
@@ -64,11 +63,6 @@ function validateRequest(req, res){
 
   if(req.body.name == null || req.body.name == ''){
     res.json({ success: false, message: 'Fail. name must be provided.' });
-    return false;
-  }
-
-  if(req.body.createdBy == null || req.body.createdBy == ''){
-    res.json({ success: false, message: 'Fail. User ID must be provided.' });
     return false;
   }
 

@@ -45,13 +45,6 @@ angular.module('mostra')
       .when('/colaborador', {
         templateUrl: fragmentsBase + '/colaborador.html'
       })
-      .when('/newproject', {
-        module: 'Projeto',
-        controller: 'ProjetoController',
-        controllerAs: 'vm',
-        templateUrl: fragmentsBase + '/newProject.html',
-        newproject: 'true'
-      })
       .otherwise({
         templateUrl : fragmentsBase + '/home.html'
       })
