@@ -6,6 +6,20 @@ export function createProject(req, res){
 	if(validateRequest(req, res)){
 		var newtccProject = new tccProject({
 				name: req.body.name,
+				emailaddress: req.body.emailaddress,
+				eixo: req.body.eixo,
+				createdon: req.body.createdon,
+				phone: req.body.phone,
+				school: req.body.school,
+				address: req.body.address,
+				estado: req.body.estado,
+				cidade: req.body.cidade,
+				orientador: req.body.orientador,
+				status: req.body.status,
+				createdBy: req.body.createdBy,
+				nomeautor1: req.body.nomeautor1,
+				nomeautor2: req.body.nomeautor2,
+				nomeautor3: req.body.nomeautor3,
 				description: req.body.description
       });
 

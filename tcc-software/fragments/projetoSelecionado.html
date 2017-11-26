@@ -2,7 +2,7 @@
   <div class="container">
   	 <!-- Portfolio Item Heading -->
     <h1 class="my-4">{{ projeto.name }}
-      <small>({{ projeto.type }})</small>
+      <small>({{ projeto.eixo }})</small>
     </h1>
 
     <!-- Portfolio Item Row -->
@@ -17,10 +17,10 @@
         <p>{{ projeto.description }}</p>
         <h3 class="my-3">Detalhes</h3>
         <ul>
-          <li>Integrantes: {{ projeto.phone }}</li>
+          <li>Integrantes: {{ projeto.nomeautor1 }} - {{ projeto.nomeautor2 }} - {{ projeto.nomeautor3 }}</li>
           <li>Orientador: {{ projeto.orientador }}</li>
           <li>Email: {{ projeto.emailaddress }}</li>
-          <li>Origem: {{ projeto.address }}, {{ projeto.city }}, {{ projeto.state }}</li>
+          <li>Origem: {{ projeto.address }}, {{ projeto.cidade }}, {{ projeto.estado }}</li>
         </ul>
       </div>
 

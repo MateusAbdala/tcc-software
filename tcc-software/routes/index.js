@@ -43,6 +43,7 @@ angular.module('mostra')
         templateUrl: fragmentsBase + '/userpage.html'
       })
       .when('/sejaumavaliador', {
+        module: 'Authentication',
         templateUrl: fragmentsBase + '/sejaumavaliador.html'
       })
       .when('/sejaumcolaborador', {

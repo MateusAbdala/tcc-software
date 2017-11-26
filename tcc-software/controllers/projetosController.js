@@ -40,7 +40,7 @@ function($scope, ProjetoClient, $routeParams, PagerService, $http) {
         ProjetoClient.GetDetails($routeParams.id).then(function (response) {
             $scope.projeto = response.data[0];
         }, function (error) {
-            console.log('Unable to load project details: ' + error.message);
+            console.log('Não foi possivel carregar os detalhes do projeto:  ' + error.message);
         });
     } else {
         ProjetoClient.GetAllProjects().then(function (response) {
@@ -48,7 +48,7 @@ function($scope, ProjetoClient, $routeParams, PagerService, $http) {
             vm.items = vm.projetos;
             vm.pager = PagerService.GetPager(vm.projetos.length, 1, visiblePages, $scope.pageSize);
         }, function (error) {
-            console.log('Unable to load projects: ' + error.message);
+            console.log('Não foi possivel carregar os projetos: ' + error.message);
         });
     }    
 

@@ -79,7 +79,9 @@ export function authenticate(req, res) {
 
 	        res.json({
 	          success: true,
-	          token: token
+            token: token,
+            usertype: user.usertype,
+            emailaddress: user.emailaddress
         	});
       	} else {
       		res.json({

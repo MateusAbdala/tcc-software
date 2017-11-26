@@ -15,7 +15,7 @@ angular.module('Authentication', [])
 	        $scope.dataLoading = true;
 	        AuthenticationClient.Login($scope.username, $scope.password, function(response) {
 	            if(response.data.success) {
-	            	AuthenticationClient.SetCredentials($scope.username, response.data.token);
+	            	AuthenticationClient.SetCredentials($scope.username, response.data.token, response.data.usertype, response.data.emailaddress);
 	            	$rootScope.$broadcast('userLoggedIn');
 	            	$location.path('/');
 	            } else {

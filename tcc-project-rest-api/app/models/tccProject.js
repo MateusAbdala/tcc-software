@@ -7,6 +7,10 @@ export default mongoose.model('tccProject', new Schema({
     default: '',
     required: 'Please fill name'
   },
+  emailaddress: {
+    type: String,
+    default: ''
+  },
   eixo: {
     type: String,
     default: '',
@@ -49,8 +53,7 @@ export default mongoose.model('tccProject', new Schema({
   },
   nomeautor1: {
     type: String,
-    default: '',
-    required: 'Please fill nomeautor1'
+    default: ''
   },
   nomeautor2: {
     type: String,
@@ -62,8 +65,11 @@ export default mongoose.model('tccProject', new Schema({
   },
   description: {
     type: String,
-    default: 'Descrição padrão(default)...',
-    required: 'Please fill description'
+    default: 'Descrição padrão(default)...'
+  },
+  status: {
+    type: String,
+    default: 'invisivel'
   },
   createdBy: {
     type: String,
