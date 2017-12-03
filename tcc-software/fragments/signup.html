@@ -299,10 +299,7 @@
                             <div ng-show="autores == 'dois' || autores == 'tres'">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-autor1">Nome do Autor(2)</label>
-                                    <input type="text" name="nomeautor2" placeholder="Nome do Autor(2)" class="form-control" ng-model="nomeautor2" ng-required="representa">
-                                    <div class="help-block" ng-show="form.rsocial.$dirty && form.rsocial.$error.required">
-                                        <div class="alert alert-danger mt-1" ng-message="required">Nome do Autor é necessário</div>
-                                    </div>
+                                    <input type="text" name="nomeautor2" placeholder="Nome do Autor(2)" class="form-control" ng-model="nomeautor2">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-CPF">CPF do Autor(2)</label>
@@ -312,14 +309,10 @@
                                         name="CPF2" 
                                         placeholder="CPF do Autor(2)" 
                                         class="form-control" 
-                                        ng-model="CPF2" 
-                                        ng-required="representa"
+                                        ng-model="CPF2"
                                         mask="999.999.999-99"
                                         onpaste="return false;"
                                         />
-                                    <div class="help-block" ng-show="form.rsocial.$dirty && form.rsocial.$error.required">
-                                        <div class="alert alert-danger mt-1" ng-message="required">CPF é necessário</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,10 +320,7 @@
                             <div ng-show="autores == 'tres'">
                                 <div class="form-group">
                                     <label class="sr-only" for="form-autor1">Nome do Autor(3)</label>
-                                    <input type="text" name="nomeautor3" placeholder="Nome do Autor(3)" class="form-control" ng-model="nomeautor3" ng-required="representa">
-                                    <div class="help-block" ng-show="form.rsocial.$dirty && form.rsocial.$error.required">
-                                        <div class="alert alert-danger mt-1" ng-message="required">Nome do Autor é necessário</div>
-                                    </div>
+                                    <input type="text" name="nomeautor3" placeholder="Nome do Autor(3)" class="form-control" ng-model="nomeautor3">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="form-CPF">CPF do Autor(3)</label>
@@ -341,13 +331,9 @@
                                         placeholder="CPF do Autor(3)" 
                                         class="form-control" 
                                         ng-model="CPF3" 
-                                        ng-required="representa"
                                         mask="999.999.999-99"
                                         onpaste="return false;"
                                         />
-                                    <div class="help-block" ng-show="form.rsocial.$dirty && form.rsocial.$error.required">
-                                        <div class="alert alert-danger mt-1" ng-message="required">CPF é necessário</div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

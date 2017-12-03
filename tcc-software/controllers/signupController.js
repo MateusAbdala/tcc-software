@@ -53,11 +53,11 @@ angular.module('Authentication')
 
 			$scope.signup = function () {
 				$scope.dataLoading = true;
-				SignUpClient.SignUp($scope.username, $scope.password, $scope.name, $scope.emailaddress, $scope.projectname, $scope.eixo, $scope.createdOn, $scope.phone, $scope.school, $scope.address, $scope.state, $scope.city, function(response) {
+				SignUpClient.SignUp($scope.username, $scope.password, $scope.name, $scope.emailaddress, function(response) {
 					if(response.data.success) {
 						AuthenticationClient.Login($scope.username, $scope.password, function(authResponse) {
 							if(authResponse.data.success) {
-								AuthenticationClient.SetCredentials($scope.username, authResponse.data.token);
+								AuthenticationClient.SetCredentials($scope.username, authResponse.data.usertype, authResponse.data.emailaddress, authResponse.data.token);
 								$rootScope.$broadcast('userLoggedIn');
 								$location.path('/');
 							} else {

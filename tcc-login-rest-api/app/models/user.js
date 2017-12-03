@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
 export default mongoose.model('User', new Schema({ 
-   	name: {
+   	username: {
    		type: String, 
    		required: true, 
    		unique: true
@@ -14,6 +14,7 @@ export default mongoose.model('User', new Schema({
 	},
 	emailaddress: {
     	type: String, 
+    	required: true, 
     	unique: true
 	}, 
 	usertype: {

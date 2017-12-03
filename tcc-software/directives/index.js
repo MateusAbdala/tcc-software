@@ -28,6 +28,8 @@ angular.module('mostra')
 
 .directive('dropuser', function(){
   return {
+    module: 'Home',
+    controller: 'HomeController',
     restrict: 'E',
     templateUrl: './fragments/dropuser.html'
   };

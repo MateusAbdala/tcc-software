@@ -25,7 +25,7 @@ export function middlewareTokenValidation(req, res, next) {
 }
 
 export function signUp(req, res) {
-	if(req.body.name == null){
+	if(req.body.username == null){
 		res.json({ success: false, message: 'Falha no Cadastro. Usuário deve ser fornecido.' })
 		return
 	} 
@@ -38,14 +38,16 @@ export function signUp(req, res) {
   const saltRounds = 10;
   bcrypt.hash(req.body.password, saltRounds).then((hash) => {
 		var user = new User({ 
-	    name: req.body.name,
+      username: req.body.username,
+      usertype: req.body.usertype,
+      emailaddress: req.body.emailaddress,
 	    password: hash
 	  });
 
 	  user.save((err) => {
 	    if (err) {
 	    	if(err.code == 11000){
-          res.json({ success: false, message: 'Falha no Cadastro. Usuário já existe.' })
+          res.json({ success: false, message: 'Falha no Cadastro. Usuário já existe ou email já cadastrado.' })
 	    	} else {
 					throw err	    		
 	    	}
@@ -59,7 +61,7 @@ export function signUp(req, res) {
 
 export function authenticate(req, res) {
   User.findOne({
-    name: req.body.name
+    username: req.body.name
   }, (err, user) => {
 
     if (err) throw err;

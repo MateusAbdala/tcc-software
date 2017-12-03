@@ -25,7 +25,7 @@
           <li ng-show="usertype == 'avaliador'" class="nav-item" ng-class="{ active:page.isSet(5) }">
               <a class="nav-link" href="#!avaliador" ng-click="page.setPage(5)">Avaliações</a>
           </li>
-          <li ng-show="usertype=='visitante'" class="nav-item" ng-class="{ active:page.isSet(6) }">
+          <li ng-show="usertype=='administrador'" class="nav-item" ng-class="{ active:page.isSet(6) }">
             <a class="nav-link" href="#!administrador" ng-click="page.setPage(6)">Administração</a>
         </li>
           <li ng-hide="userLoggedIn" class="nav-item" ng-class="{ active:page.isSet(7) }">

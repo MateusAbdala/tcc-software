@@ -27,7 +27,7 @@ angular.module('Authentication')
         service.SetCredentials = function (username, token, usertype, emailaddress) {
 		  $window.localStorage['userLoggedIn'] = username;
           $window.localStorage['jwtToken'] = token;
-          $window.localStorage['userrtype'] = usertype;
+          $window.localStorage['usertype'] = usertype;
           $window.localStorage['emailaddress'] = emailaddress;
         };
 
