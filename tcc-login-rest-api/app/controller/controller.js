@@ -61,7 +61,7 @@ export function signUp(req, res) {
 
 export function authenticate(req, res) {
   User.findOne({
-    username: req.body.name
+    username: req.body.username
   }, (err, user) => {
 
     if (err) throw err;

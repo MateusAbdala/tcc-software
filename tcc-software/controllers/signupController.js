@@ -53,7 +53,7 @@ angular.module('Authentication')
 
 			$scope.signup = function () {
 				$scope.dataLoading = true;
-				SignUpClient.SignUp($scope.username, $scope.password, $scope.name, $scope.emailaddress, function(response) {
+				SignUpClient.SignUp($scope.username, $scope.password, $scope.emailaddress, function(response) {
 					if(response.data.success) {
 						AuthenticationClient.Login($scope.username, $scope.password, function(authResponse) {
 							if(authResponse.data.success) {

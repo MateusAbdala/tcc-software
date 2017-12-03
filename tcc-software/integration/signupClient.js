@@ -5,7 +5,7 @@ angular.module('Authentication')
     function ($http, $rootScope, $timeout, $window) {
         var service = {};
 
-        service.SignUp = function (username, password, name, emailaddress, callback) {
+        service.SignUp = function (username, password, emailaddress, callback) {
             $http({
             	headers: {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'},
 					method: 'POST',
@@ -13,7 +13,6 @@ angular.module('Authentication')
 					data: { 
 					username: username, 
 					password: password,
-					name: name,
 					emailaddress: emailaddress
 					}
 				}).then(function successCallback(response) {

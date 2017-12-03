@@ -40,6 +40,8 @@ angular.module('mostra')
         templateUrl: fragmentsBase + '/projetoSelecionado.html'
       })
       .when('/userpage', {
+        module: 'Home',
+        controller: 'HomeController',
         templateUrl: fragmentsBase + '/userpage.html'
       })
       .when('/sejaumavaliador', {

@@ -13,7 +13,7 @@ angular.module('Authentication')
                 method: 'POST',
                 url: 'http://localhost:8082/login-service/authenticate',
                 data: { 
-                    name: username, 
+                    username: username, 
                     password: password 
                 }
             }).then(function successCallback(response) {

@@ -9,8 +9,7 @@ export default mongoose.model('User', new Schema({
    	}, 
 	   password: {
     	type: String, 
-    	required: true, 
-    	unique: true
+    	required: true
 	},
 	emailaddress: {
     	type: String, 

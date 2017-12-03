@@ -10,18 +10,30 @@ angular.module('Home', [])
 		$scope.$watch(
 			function() { 
 				return $window.localStorage['userLoggedIn']; 
-				return $window.localStorage['usertype']; 
-				return $window.localStorage['emailaddress']; 
 			}, 
 			function(newValue, oldValue){
 				if(oldValue !== newValue){
 					$scope.userLoggedIn = newValue;
 				}
+			}
+		);
+		$scope.$watch(
+			function() { 
+				return $window.localStorage['usertype']; 
+			}, 
+			function(newValue, oldValue){
 				if(oldValue !== newValue){
-					$scope.usertype = usertype;
+					$scope.usertype = newValue;
 				}
+			}
+		);
+		$scope.$watch(
+			function() { 
+				return $window.localStorage['emailaddress']; 
+			}, 
+			function(newValue, oldValue){
 				if(oldValue !== newValue){
-					$scope.emailaddress = emailaddress;
+					$scope.emailaddress = newValue;
 				}
 			}
 		);
